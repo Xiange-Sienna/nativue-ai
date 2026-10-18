@@ -8,7 +8,7 @@
 
 发行团队：**SienGe AI Lab** · 小红书：**SienGe的AI实验室**
 
-![从分散的 AI 开发到有源码证据的协作画布](assets/pain-points.zh.svg)
+![八个使用前后对比场景：理解架构、定位源码与 A/B/C 协作](assets/pain-points.zh.svg)
 
 ## 本地开始
 

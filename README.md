@@ -8,7 +8,7 @@ Understand a codebase, coordinate A/B/C agents, and see exactly which version ha
 
 By **SienGe AI Lab** · Xiaohongshu / 小红书: **SienGe的AI实验室**
 
-![From scattered AI development to an evidence-backed canvas](assets/pain-points.en.svg)
+![Eight before-and-after scenes for architecture and A/B/C collaboration](assets/pain-points.en.svg)
 
 ## Start locally
 

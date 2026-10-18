@@ -1,34 +1,281 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
-<title id="title">让 AI 原生开发过程看得见</title>
-<desc id="desc">从猜代码、来回传话，到理解架构、有序协作</desc>
-<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101b32"/><stop offset="1" stop-color="#172b37"/></linearGradient><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#66dbc4" stroke-width="2"/></marker></defs>
-<rect width="1200" height="640" rx="24" fill="url(#bg)"/>
-<g font-family="Inter,Arial,PingFang SC,Microsoft YaHei,sans-serif">
-<text x="54" y="62" fill="#80e5d0" font-size="17" font-weight="700" letter-spacing="2">NATIVUE AI</text>
-<text x="54" y="112" fill="#f0f5ff" font-size="32" font-weight="700">让 AI 原生开发过程看得见</text>
-<rect x="44" y="150" width="495" height="382" rx="18" fill="#1b293e" stroke="#35445a"/>
-<rect x="661" y="150" width="495" height="382" rx="18" fill="#172e35" stroke="#3b756c"/>
-<text x="76" y="193" fill="#b9c7da" font-size="22" font-weight="700">分散的工作</text>
-<text x="693" y="193" fill="#9cebd9" font-size="22" font-weight="700">共享的画布</text>
-<path d="M558 343H640" stroke="#66dbc4" stroke-width="3" marker-end="url(#arrow)"/>
-<rect x="74" y="224" width="435" height="70" rx="12" fill="#243349"/>
-<text x="95" y="266" fill="#e4eaf4" font-size="20">这段代码属于哪个模块？</text>
-<rect x="691" y="224" width="435" height="70" rx="12" fill="#22443f"/>
-<circle cx="720" cy="259" r="12" fill="#75dfc2"/>
-<path d="M714 259l4 4 8-9" fill="none" stroke="#17332f" stroke-width="2"/>
-<text x="746" y="266" fill="#e5fff5" font-size="19">架构关系 + 源码证据</text>
-<rect x="74" y="318" width="435" height="70" rx="12" fill="#243349"/>
-<text x="95" y="360" fill="#e4eaf4" font-size="20">谁正在改这个文件？</text>
-<rect x="691" y="318" width="435" height="70" rx="12" fill="#22443f"/>
-<circle cx="720" cy="353" r="12" fill="#75dfc2"/>
-<path d="M714 353l4 4 8-9" fill="none" stroke="#17332f" stroke-width="2"/>
-<text x="746" y="360" fill="#e5fff5" font-size="19">A 拆分 · B 开发 · C 验收</text>
-<rect x="74" y="412" width="435" height="70" rx="12" fill="#243349"/>
-<text x="95" y="454" fill="#e4eaf4" font-size="20">到底哪个版本通过了验收？</text>
-<rect x="691" y="412" width="435" height="70" rx="12" fill="#22443f"/>
-<circle cx="720" cy="447" r="12" fill="#75dfc2"/>
-<path d="M714 447l4 4 8-9" fill="none" stroke="#17332f" stroke-width="2"/>
-<text x="746" y="454" fill="#e5fff5" font-size="19">准确版本 + 集成复验</text>
-<text x="600" y="580" text-anchor="middle" fill="#b3c4d8" font-size="19">从猜代码、来回传话，到理解架构、有序协作</text>
-<text x="600" y="613" text-anchor="middle" fill="#7592a5" font-size="14">SienGe AI Lab</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1480" viewBox="0 0 1600 1480" role="img" aria-labelledby="title desc" xml:lang="zh">
+<title id="title">为什么用 Nativue AI</title>
+<desc id="desc">八个使用前后的场景：理解架构、定位源码、角色交接、并行认领、独立验收、集成复验、自动更新与工具选择。</desc>
+<defs>
+<symbol id="person" viewBox="0 0 120 130">
+ <path d="M20 103Q17 77 33 69L50 64 67 70Q81 77 83 105" fill="#a9b2bd"/>
+ <path d="M38 46Q27 25 40 17Q57 6 70 23L70 43" fill="#616b7b"/>
+ <ellipse cx="53" cy="40" rx="18" ry="22" fill="#e0dfe1"/>
+ <path d="M35 34Q36 16 55 17Q68 19 69 32L59 29 54 21 48 31Z" fill="#616b7b"/>
+ <circle cx="48" cy="40" r="1.5" fill="#596174"/><circle cx="61" cy="40" r="1.5" fill="#596174"/>
+ <path d="M50 53Q56 56 61 51M55 43L53 48 57 48" stroke="#9095a1" fill="none" stroke-linecap="round"/>
+ <path d="M31 78L20 100 43 106M73 79L91 99 74 108" stroke="#8b95a3" stroke-width="11" fill="none" stroke-linecap="round"/>
+ <path d="M30 118L27 130M74 118L78 130" stroke="#707c8e" stroke-width="10"/>
+ <path d="M39 89H100L94 116H34Z" fill="#bac1cb" stroke="#7c899a" stroke-width="1.5"/>
+ <circle cx="67" cy="102" r="3" fill="#eaf0f6"/>
+ <path d="M12 118H110" stroke="#77869b" stroke-width="4" stroke-linecap="round"/>
+</symbol>
+<symbol id="lost" viewBox="0 0 120 150"><use href="#person" x="0" y="20" width="112" height="125"/><path d="M87 16Q86 7 96 7Q109 8 105 19L97 25V29" stroke="#a1a0ad" stroke-width="4" fill="none"/><circle cx="97" cy="38" r="2.5" fill="#a1a0ad"/><path d="M8 135l13-3 7 9-16 4ZM94 130l18 4-5 12-17-5Z" fill="#dedbe0" stroke="#b8b3bf"/></symbol>
+<symbol id="papers" viewBox="0 0 120 150"><use href="#person" x="0" y="10" width="105" height="119"/><g fill="#e1dde3" stroke="#b4aeba"><path d="M2 126l24-7 17 10-25 9Z"/><path d="M28 139l25-8 15 11-25 7Z"/><path d="M60 122l28-5 20 14-30 7Z"/><path d="M91 140l19-7 8 7-23 8Z"/></g><path d="M7 11L22 5M8 20H19" stroke="#c6b2bc" stroke-width="2"/></symbol>
+<symbol id="relay" viewBox="0 0 120 150"><use href="#person" x="3" y="26" width="105" height="115"/><g fill="#eee9ef" stroke="#b9b2c0" stroke-width="1.5"><path d="M3 7H54V29H28L19 37V29H3Z"/><path d="M65 25H117V47H104L96 55V47H65Z"/></g><path d="M20 17H39M76 36H101M28 43Q51 32 67 49" fill="none" stroke="#aaa3b2" stroke-width="2"/></symbol>
+<symbol id="collision" viewBox="0 0 120 150"><use href="#person" x="0" y="39" width="65" height="100"/><use href="#person" x="57" y="39" width="65" height="100"/><rect x="45" y="8" width="29" height="36" rx="4" fill="#e5dce2" stroke="#a7a0b1"/><path d="M42 66L52 48M81 64L69 48" stroke="#b2a8b7" stroke-width="2"/><circle cx="87" cy="15" r="11" fill="#f4d7dd"/><path d="M83 11l8 8m0-8l-8 8" stroke="#cf7d8a" stroke-width="2"/></symbol>
+<symbol id="uncertain" viewBox="0 0 120 150"><use href="#person" x="0" y="20" width="104" height="120"/><circle cx="91" cy="23" r="20" fill="#e9e3eb"/><path d="M82 23l6 6 12-13" fill="none" stroke="#a0a1b0" stroke-width="3"/><path d="M99 47v13m0 5v2" stroke="#bf8a99" stroke-width="3"/></symbol>
+<symbol id="pieces" viewBox="0 0 120 150"><use href="#person" x="0" y="24" width="105" height="120"/><g fill="#e0dce5" stroke="#a7a0b2"><rect x="3" y="5" width="23" height="20" rx="3"/><rect x="49" y="0" width="25" height="21" rx="3"/><rect x="88" y="18" width="25" height="21" rx="3"/></g><path d="M28 15H43M77 15l9 9" stroke="#afa4b8" stroke-width="2" stroke-dasharray="3 4"/></symbol>
+<symbol id="stale" viewBox="0 0 120 150"><use href="#person" x="0" y="26" width="108" height="120"/><path d="M8 13H43M8 9v9m35-9v9M13 19l25 21M38 19L13 40M8 44H43" fill="none" stroke="#aca5b7" stroke-width="2"/><path d="M75 7h36v32H75Z" fill="#e8e2eb" stroke="#b1a7bb"/><path d="M81 16h22m-22 7h14" stroke="#b9afc4" stroke-width="2"/></symbol>
+<symbol id="tools" viewBox="0 0 120 150"><use href="#person" x="2" y="32" width="105" height="112"/><g fill="#e7e2eb" stroke="#aaa3b5"><rect x="4" y="6" width="29" height="26" rx="4"/><rect x="47" y="1" width="29" height="26" rx="4"/><rect x="88" y="16" width="29" height="26" rx="4"/></g><path d="M12 18l4-4m0 0l4 4m33-4h15M98 29h9" stroke="#a59daf" stroke-width="2"/></symbol>
+<symbol id="architecture" viewBox="0 0 110 150"><path d="M54 29v25M22 80h64M22 80v25m64-25v25M54 54L22 80m32-26l32 26" fill="none" stroke="#8da8ac" stroke-width="2"/><rect x="29" y="10" width="50" height="31" rx="5" fill="#c8ddd9" stroke="#92b9b0"/><rect x="2" y="106" width="41" height="28" rx="5" fill="#dce8e6" stroke="#acc7c1"/><rect x="65" y="106" width="41" height="28" rx="5" fill="#dce8e6" stroke="#acc7c1"/><path d="M38 23h31M11 118h23m41 0h23" stroke="#749b91" stroke-width="3"/></symbol>
+<symbol id="source" viewBox="0 0 110 150"><rect x="4" y="11" width="102" height="126" rx="7" fill="#fff" stroke="#adc9c2"/><path d="M18 31h25m-20 0v75m0-52h17m-17 24h17m-17 24h17" stroke="#a5bdb9" stroke-width="2"/><rect x="37" y="43" width="55" height="22" rx="4" fill="#d4eae0"/><path d="M47 54h35m-35 24h39m-39 24h28" stroke="#75a58d" stroke-width="3"/><path d="M89 57l-8-6v12Z" fill="#538c75"/></symbol>
+<symbol id="roles" viewBox="0 0 110 150"><path d="M55 35v29M55 64L22 91m33-27l33 27" fill="none" stroke="#8cb6a9" stroke-width="2"/><g fill="#e1eee8" stroke="#9fc4b6"><circle cx="55" cy="24" r="21"/><circle cx="23" cy="108" r="21"/><circle cx="87" cy="108" r="21"/></g><g font-size="21" font-weight="700" fill="#51836f" text-anchor="middle"><text x="55" y="31">A</text><text x="23" y="115">B</text><text x="87" y="115">C</text></g></symbol>
+<symbol id="lanes" viewBox="0 0 110 150"><g fill="#e0eee7" stroke="#aac9bb"><rect x="4" y="15" width="103" height="34" rx="6"/><rect x="4" y="59" width="103" height="34" rx="6"/><rect x="4" y="103" width="103" height="34" rx="6"/></g><g fill="#61937b"><circle cx="21" cy="32" r="6"/><circle cx="21" cy="76" r="6"/><circle cx="21" cy="120" r="6"/></g><path d="M38 32h52m-52 44h52m-52 44h52" stroke="#94b5a4" stroke-width="3"/></symbol>
+<symbol id="review" viewBox="0 0 110 150"><rect x="10" y="11" width="76" height="116" rx="7" fill="#fff" stroke="#afc9c0"/><path d="M26 33h42m-42 21h42m-42 21h23" stroke="#b1c7be" stroke-width="3"/><circle cx="75" cy="106" r="28" fill="#d5e9de" stroke="#9fc3af"/><path d="M61 106l10 10 20-23" stroke="#5e9378" stroke-width="4" fill="none"/></symbol>
+<symbol id="integration" viewBox="0 0 110 150"><g fill="#dcece3" stroke="#9abfaa"><rect x="4" y="8" width="39" height="27" rx="4"/><rect x="67" y="8" width="39" height="27" rx="4"/><rect x="15" y="89" width="81" height="49" rx="6"/></g><path d="M23 40l30 36m33-36L57 76" stroke="#9bbaab" stroke-width="2"/><path d="M37 111l11 11 25-27" stroke="#5e9378" stroke-width="4" fill="none"/></symbol>
+<symbol id="refresh" viewBox="0 0 110 150"><path d="M23 32a40 40 0 0 1 67 18m-4 56a40 40 0 0 1-67-18" fill="none" stroke="#8fb7a6" stroke-width="3"/><path d="M91 34l2 20-19-6M18 104l-2-20 19 5" fill="#b6d5c3"/><rect x="28" y="54" width="56" height="40" rx="6" fill="#fff" stroke="#a9c8b9"/><path d="M38 67h35m-35 13h24" stroke="#9bbfac" stroke-width="3"/></symbol>
+<symbol id="portable" viewBox="0 0 110 150"><g fill="#fff" stroke="#a8c7b7"><rect x="3" y="10" width="104" height="34" rx="6"/><rect x="3" y="58" width="104" height="34" rx="6"/><rect x="3" y="106" width="104" height="34" rx="6"/></g><g fill="#5d8b74" font-size="12" text-anchor="middle" font-weight="600"><text x="55" y="32">Codex</text><text x="55" y="80">Claude Code</text><text x="55" y="128">WorkBuddy</text></g></symbol>
+</defs>
+<rect width="1600" height="1480" rx="20" fill="#f5f7fc"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,Arial,sans-serif">
+<text x="28" y="45" font-size="30" fill="#253653" font-weight="700" >为什么用 Nativue AI</text>
+<text x="28" y="76" font-size="19" fill="#8490a5" >让 AI 开发的架构、协作和验收，都看得清。</text>
+<g transform="translate(24 102)" data-card="1">
+<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
+<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >先看懂代码，再动手开发</text>
+<text x="18" y="58" font-size="17" fill="#8992a6" >架构、模块和通信关系，有源码可追踪。</text>
+<g transform="translate(16 78)" data-panel="before">
+<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
+<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
+<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">使用前</text>
+<use href="#lost" x="7" y="51" width="111" height="150"/>
+<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="81" font-size="16.5" fill="#7c7d91" >从哪个文件开始？</text>
+<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="125" font-size="16.5" fill="#7c7d91" >这几个模块怎么连？</text>
+<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="169" font-size="16.5" fill="#7c7d91" >改这里会影响谁？</text>
+</g>
+<g transform="translate(390 78)" data-panel="after">
+<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
+<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
+<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">用了 Nativue</text>
+<use href="#architecture" x="257" y="58" width="89" height="128"/>
+<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="68" font-size="17" fill="#687b83" >按模块看清职责</text>
+<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="103" font-size="17" fill="#687b83" >关系旁边附源码证据</text>
+<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="138" font-size="17" fill="#687b83" >从自己的工作区开始</text>
+<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >从翻目录，到看清全貌。</text>
+</g>
+</g>
+<g transform="translate(808 102)" data-card="2">
+<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
+<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >从画布，直接走到源文件</text>
+<text x="18" y="58" font-size="17" fill="#8992a6" >点到哪，就定位到哪，不用再手动翻找。</text>
+<g transform="translate(16 78)" data-panel="before">
+<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
+<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
+<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">使用前</text>
+<use href="#papers" x="7" y="51" width="111" height="150"/>
+<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="81" font-size="16.5" fill="#7c7d91" >图上说的是哪份代码？</text>
+<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="125" font-size="16.5" fill="#7c7d91" >高亮文件在哪里？</text>
+<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="169" font-size="16.5" fill="#7c7d91" >又要展开一遍目录…</text>
+</g>
+<g transform="translate(390 78)" data-panel="after">
+<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
+<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
+<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">用了 Nativue</text>
+<use href="#source" x="257" y="58" width="89" height="128"/>
+<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="68" font-size="17" fill="#687b83" >展开目标文件的目录</text>
+<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="103" font-size="17" fill="#687b83" >视口直接滚动到文件</text>
+<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="138" font-size="17" fill="#687b83" >多个引用逐个切换</text>
+<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >看图与读代码连起来。</text>
+</g>
+</g>
+<g transform="translate(24 428)" data-card="3">
+<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
+<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >A / B / C，各自知道下一步</text>
+<text x="18" y="58" font-size="17" fill="#8992a6" >把角色、范围和交接，放进同一套记录。</text>
+<g transform="translate(16 78)" data-panel="before">
+<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
+<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
+<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">使用前</text>
+<use href="#relay" x="7" y="51" width="111" height="150"/>
+<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="81" font-size="16.5" fill="#7c7d91" >这段话还得转给 B</text>
+<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="125" font-size="16.5" fill="#7c7d91" >C 在哪个对话里？</text>
+<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="169" font-size="16.5" fill="#7c7d91" >下一步该谁接手？</text>
+</g>
+<g transform="translate(390 78)" data-panel="after">
+<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
+<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
+<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">用了 Nativue</text>
+<use href="#roles" x="257" y="58" width="89" height="128"/>
+<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="68" font-size="17" fill="#687b83" >A 拆分与协调</text>
+<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="103" font-size="17" fill="#687b83" >B 实现与返工</text>
+<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="138" font-size="17" fill="#687b83" >C 独立验收</text>
+<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >交接靠记录，不靠记忆。</text>
+</g>
+</g>
+<g transform="translate(808 428)" data-card="4">
+<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
+<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >并行开发，先看依赖和认领</text>
+<text x="18" y="58" font-size="17" fill="#8992a6" >让每个任务都有范围，不把冲突留到最后。</text>
+<g transform="translate(16 78)" data-panel="before">
+<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
+<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
+<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">使用前</text>
+<use href="#collision" x="7" y="51" width="111" height="150"/>
+<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="81" font-size="16.5" fill="#7c7d91" >两个 Agent 在改同一处</text>
+<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="125" font-size="16.5" fill="#7c7d91" >接口还没定，先各做各的</text>
+<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="169" font-size="16.5" fill="#7c7d91" >合并时才发现冲突</text>
+</g>
+<g transform="translate(390 78)" data-panel="after">
+<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
+<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
+<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">用了 Nativue</text>
+<use href="#lanes" x="257" y="58" width="89" height="128"/>
+<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="68" font-size="17" fill="#687b83" >先登记文件负责人</text>
+<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="103" font-size="17" fill="#687b83" >依赖就绪后再开工</text>
+<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="138" font-size="17" fill="#687b83" >冲突范围及时协调</text>
+<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >看清谁在改、哪些能并行。</text>
+</g>
+</g>
+<g transform="translate(24 754)" data-card="5">
+<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
+<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >自测之后，再由 C 独立验收</text>
+<text x="18" y="58" font-size="17" fill="#8992a6" >成功、失败、未测，都有明确的记录。</text>
+<g transform="translate(16 78)" data-panel="before">
+<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
+<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
+<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">使用前</text>
+<use href="#uncertain" x="7" y="51" width="111" height="150"/>
+<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="81" font-size="16.5" fill="#7c7d91" >Agent 说“已经修好了”</text>
+<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="125" font-size="16.5" fill="#7c7d91" >只是构建通过了吗？</text>
+<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="169" font-size="16.5" fill="#7c7d91" >失败和恢复测过吗？</text>
+</g>
+<g transform="translate(390 78)" data-panel="after">
+<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
+<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
+<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">用了 Nativue</text>
+<use href="#review" x="257" y="58" width="89" height="128"/>
+<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="68" font-size="17" fill="#687b83" >独立上下文来验收</text>
+<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="103" font-size="17" fill="#687b83" >绑定冻结版本与证据</text>
+<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="138" font-size="17" fill="#687b83" >不通过就回 B 返工</text>
+<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >把“做了”与“验过”分开。</text>
+</g>
+</g>
+<g transform="translate(808 754)" data-card="6">
+<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
+<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >单项通过，还要验集成版本</text>
+<text x="18" y="58" font-size="17" fill="#8992a6" >一起运行后再复验，最后交给用户手测。</text>
+<g transform="translate(16 78)" data-panel="before">
+<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
+<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
+<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">使用前</text>
+<use href="#pieces" x="7" y="51" width="111" height="150"/>
+<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="81" font-size="16.5" fill="#7c7d91" >每条分支都说通过了</text>
+<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="125" font-size="16.5" fill="#7c7d91" >合在一起还能用吗？</text>
+<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="169" font-size="16.5" fill="#7c7d91" >到底验的是哪个版本？</text>
+</g>
+<g transform="translate(390 78)" data-panel="after">
+<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
+<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
+<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">用了 Nativue</text>
+<use href="#integration" x="257" y="58" width="89" height="128"/>
+<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="68" font-size="17" fill="#687b83" >只纳入已通过的包</text>
+<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="103" font-size="17" fill="#687b83" >C 再验集成提交</text>
+<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="138" font-size="17" fill="#687b83" >用户手测单独确认</text>
+<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >交付的是可追溯的版本。</text>
+</g>
+</g>
+<g transform="translate(24 1080)" data-card="7">
+<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
+<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >代码变化，画布跟上进度</text>
+<text x="18" y="58" font-size="17" fill="#8992a6" >本地服务持续检查，更新状态清楚可见。</text>
+<g transform="translate(16 78)" data-panel="before">
+<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
+<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
+<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">使用前</text>
+<use href="#stale" x="7" y="51" width="111" height="150"/>
+<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="81" font-size="16.5" fill="#7c7d91" >代码改了，图还是旧的</text>
+<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="125" font-size="16.5" fill="#7c7d91" >这张图多久没更新？</text>
+<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="169" font-size="16.5" fill="#7c7d91" >本地和远端混在一起</text>
+</g>
+<g transform="translate(390 78)" data-panel="after">
+<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
+<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
+<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">用了 Nativue</text>
+<use href="#refresh" x="257" y="58" width="89" height="128"/>
+<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="68" font-size="17" fill="#687b83" >监听源码和任务变化</text>
+<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="103" font-size="17" fill="#687b83" >按配置增量分析</text>
+<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="138" font-size="17" fill="#687b83" >显示来源、版本与时间</text>
+<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >过期会标记，更新有依据。</text>
+</g>
+</g>
+<g transform="translate(808 1080)" data-card="8">
+<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
+<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >选你的工具，用同一套流程</text>
+<text x="18" y="58" font-size="17" fill="#8992a6" >独立开对话，或在宿主支持时由 A 派工。</text>
+<g transform="translate(16 78)" data-panel="before">
+<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
+<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
+<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">使用前</text>
+<use href="#tools" x="7" y="51" width="111" height="150"/>
+<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="81" font-size="16.5" fill="#7c7d91" >换个工具又要重写流程</text>
+<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="125" font-size="16.5" fill="#7c7d91" >任务多时来回切对话</text>
+<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
+<text x="136" y="169" font-size="16.5" fill="#7c7d91" >角色要求很容易丢</text>
+</g>
+<g transform="translate(390 78)" data-panel="after">
+<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
+<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
+<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">用了 Nativue</text>
+<use href="#portable" x="257" y="58" width="89" height="128"/>
+<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="68" font-size="17" fill="#687b83" >通用 Skill 与交接包</text>
+<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="103" font-size="17" fill="#687b83" >手动 A / B / C 模式</text>
+<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
+<text x="30" y="138" font-size="17" fill="#687b83" >原生子 Agent 按能力启用</text>
+<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >工具可选，交付规则一致。</text>
+</g>
+</g>
+<text x="28" y="1437" font-size="16" fill="#8793a5" >源码证据不等于运行验收；后台语义分析需启用运行器，自动子 Agent 取决于宿主能力。</text>
+<text x="1572" y="1462" font-size="15" fill="#8793a5" text-anchor="end">SienGe AI Lab · SienGe的AI实验室</text>
 </g></svg>
