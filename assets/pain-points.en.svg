@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+<title id="title">AI-native development, made visible</title>
+<desc id="desc">From guessing and relaying messages to understanding and coordinated delivery</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101b32"/><stop offset="1" stop-color="#172b37"/></linearGradient><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#66dbc4" stroke-width="2"/></marker></defs>
+<rect width="1200" height="640" rx="24" fill="url(#bg)"/>
+<g font-family="Inter,Arial,PingFang SC,Microsoft YaHei,sans-serif">
+<text x="54" y="62" fill="#80e5d0" font-size="17" font-weight="700" letter-spacing="2">NATIVUE AI</text>
+<text x="54" y="112" fill="#f0f5ff" font-size="32" font-weight="700">AI-native development, made visible</text>
+<rect x="44" y="150" width="495" height="382" rx="18" fill="#1b293e" stroke="#35445a"/>
+<rect x="661" y="150" width="495" height="382" rx="18" fill="#172e35" stroke="#3b756c"/>
+<text x="76" y="193" fill="#b9c7da" font-size="22" font-weight="700">Scattered work</text>
+<text x="693" y="193" fill="#9cebd9" font-size="22" font-weight="700">One shared canvas</text>
+<path d="M558 343H640" stroke="#66dbc4" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="74" y="224" width="435" height="70" rx="12" fill="#243349"/>
+<text x="95" y="266" fill="#e4eaf4" font-size="20">Where does this code belong?</text>
+<rect x="691" y="224" width="435" height="70" rx="12" fill="#22443f"/>
+<circle cx="720" cy="259" r="12" fill="#75dfc2"/>
+<path d="M714 259l4 4 8-9" fill="none" stroke="#17332f" stroke-width="2"/>
+<text x="746" y="266" fill="#e5fff5" font-size="19">Architecture + source evidence</text>
+<rect x="74" y="318" width="435" height="70" rx="12" fill="#243349"/>
+<text x="95" y="360" fill="#e4eaf4" font-size="20">Who is changing this file?</text>
+<rect x="691" y="318" width="435" height="70" rx="12" fill="#22443f"/>
+<circle cx="720" cy="353" r="12" fill="#75dfc2"/>
+<path d="M714 353l4 4 8-9" fill="none" stroke="#17332f" stroke-width="2"/>
+<text x="746" y="360" fill="#e5fff5" font-size="19">A plans · B builds · C verifies</text>
+<rect x="74" y="412" width="435" height="70" rx="12" fill="#243349"/>
+<text x="95" y="454" fill="#e4eaf4" font-size="20">Which version actually passed?</text>
+<rect x="691" y="412" width="435" height="70" rx="12" fill="#22443f"/>
+<circle cx="720" cy="447" r="12" fill="#75dfc2"/>
+<path d="M714 447l4 4 8-9" fill="none" stroke="#17332f" stroke-width="2"/>
+<text x="746" y="454" fill="#e5fff5" font-size="19">Exact commits + integration review</text>
+<text x="600" y="580" text-anchor="middle" fill="#b3c4d8" font-size="19">From guessing and relaying messages to understanding and coordinated delivery</text>
+<text x="600" y="613" text-anchor="middle" fill="#7592a5" font-size="14">SienGe AI Lab</text>
+</g></svg>

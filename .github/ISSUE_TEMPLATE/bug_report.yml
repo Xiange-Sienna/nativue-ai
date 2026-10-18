@@ -1,0 +1,36 @@
+name: Bug report / 问题反馈
+description: Report a reproducible problem using fictional data / 使用虚构数据反馈可复现问题
+body:
+  - type: markdown
+    attributes:
+      value: "Use fictional files and sanitized logs. Do not attach private snapshots, credentials, or absolute personal paths. / 使用虚构文件和脱敏日志，请勿上传私有快照、凭证及个人绝对路径。"
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior / 预期与实际行为
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and fictional reproduction / 步骤与虚构复现
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Nativue, Node, OS, AI tool versions / 版本与环境
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Suggested priority / 建议优先级
+      options:
+        - P2 — ordinary defect / 一般问题
+        - P1 — important workflow blocked / 重要流程受阻
+        - P0 — critical data loss or broad outage / 严重数据损坏或大范围故障
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence and untested cases / 脱敏证据及未测项

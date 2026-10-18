@@ -1,0 +1,5 @@
+node_modules/
+.nativue/
+artifacts/
+*.tgz
+.DS_Store

@@ -1,0 +1,19 @@
+name: Improvement / 改进建议
+description: Describe the behavior you need / 描述你需要的行为
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and affected users / 问题与使用者
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Desired behavior and acceptance criteria / 目标行为与验收标准
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Tools, constraints, and alternatives / 工具、约束与备选方式

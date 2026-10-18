@@ -1,0 +1,39 @@
+{
+  "name": "nativue-ai",
+  "version": "0.1.0",
+  "description": "Your canvas for AI-native development.",
+  "type": "module",
+  "license": "MIT",
+  "author": "SienGe AI Lab",
+  "engines": {
+    "node": ">=24"
+  },
+  "bin": {
+    "nativue": "bin/nativue.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "web",
+    "skills",
+    "assets",
+    "docs",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node src/cli.ts",
+    "build": "tsc --noEmit && esbuild web/app.ts --bundle --format=esm --outfile=web/app.js",
+    "test": "node --test test/*.test.ts",
+    "check": "npm run build && npm test",
+    "pack:check": "npm pack --dry-run",
+    "test:browser": "node test/browser.smoke.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0",
+    "esbuild": "^0.25.0",
+    "@playwright/test": "^1.56.0"
+  }
+}
