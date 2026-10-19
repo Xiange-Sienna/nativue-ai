@@ -1,281 +1,433 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1480" viewBox="0 0 1600 1480" role="img" aria-labelledby="title desc" xml:lang="en">
-<title id="title">Why Nativue AI</title>
-<desc id="desc">Eight before-and-after scenes: architecture, source navigation, role handoffs, parallel ownership, independent review, integration, fresh diagrams and tool choice.</desc>
-<defs>
-<symbol id="person" viewBox="0 0 120 130">
- <path d="M20 103Q17 77 33 69L50 64 67 70Q81 77 83 105" fill="#a9b2bd"/>
- <path d="M38 46Q27 25 40 17Q57 6 70 23L70 43" fill="#616b7b"/>
- <ellipse cx="53" cy="40" rx="18" ry="22" fill="#e0dfe1"/>
- <path d="M35 34Q36 16 55 17Q68 19 69 32L59 29 54 21 48 31Z" fill="#616b7b"/>
- <circle cx="48" cy="40" r="1.5" fill="#596174"/><circle cx="61" cy="40" r="1.5" fill="#596174"/>
- <path d="M50 53Q56 56 61 51M55 43L53 48 57 48" stroke="#9095a1" fill="none" stroke-linecap="round"/>
- <path d="M31 78L20 100 43 106M73 79L91 99 74 108" stroke="#8b95a3" stroke-width="11" fill="none" stroke-linecap="round"/>
- <path d="M30 118L27 130M74 118L78 130" stroke="#707c8e" stroke-width="10"/>
- <path d="M39 89H100L94 116H34Z" fill="#bac1cb" stroke="#7c899a" stroke-width="1.5"/>
- <circle cx="67" cy="102" r="3" fill="#eaf0f6"/>
- <path d="M12 118H110" stroke="#77869b" stroke-width="4" stroke-linecap="round"/>
-</symbol>
-<symbol id="lost" viewBox="0 0 120 150"><use href="#person" x="0" y="20" width="112" height="125"/><path d="M87 16Q86 7 96 7Q109 8 105 19L97 25V29" stroke="#a1a0ad" stroke-width="4" fill="none"/><circle cx="97" cy="38" r="2.5" fill="#a1a0ad"/><path d="M8 135l13-3 7 9-16 4ZM94 130l18 4-5 12-17-5Z" fill="#dedbe0" stroke="#b8b3bf"/></symbol>
-<symbol id="papers" viewBox="0 0 120 150"><use href="#person" x="0" y="10" width="105" height="119"/><g fill="#e1dde3" stroke="#b4aeba"><path d="M2 126l24-7 17 10-25 9Z"/><path d="M28 139l25-8 15 11-25 7Z"/><path d="M60 122l28-5 20 14-30 7Z"/><path d="M91 140l19-7 8 7-23 8Z"/></g><path d="M7 11L22 5M8 20H19" stroke="#c6b2bc" stroke-width="2"/></symbol>
-<symbol id="relay" viewBox="0 0 120 150"><use href="#person" x="3" y="26" width="105" height="115"/><g fill="#eee9ef" stroke="#b9b2c0" stroke-width="1.5"><path d="M3 7H54V29H28L19 37V29H3Z"/><path d="M65 25H117V47H104L96 55V47H65Z"/></g><path d="M20 17H39M76 36H101M28 43Q51 32 67 49" fill="none" stroke="#aaa3b2" stroke-width="2"/></symbol>
-<symbol id="collision" viewBox="0 0 120 150"><use href="#person" x="0" y="39" width="65" height="100"/><use href="#person" x="57" y="39" width="65" height="100"/><rect x="45" y="8" width="29" height="36" rx="4" fill="#e5dce2" stroke="#a7a0b1"/><path d="M42 66L52 48M81 64L69 48" stroke="#b2a8b7" stroke-width="2"/><circle cx="87" cy="15" r="11" fill="#f4d7dd"/><path d="M83 11l8 8m0-8l-8 8" stroke="#cf7d8a" stroke-width="2"/></symbol>
-<symbol id="uncertain" viewBox="0 0 120 150"><use href="#person" x="0" y="20" width="104" height="120"/><circle cx="91" cy="23" r="20" fill="#e9e3eb"/><path d="M82 23l6 6 12-13" fill="none" stroke="#a0a1b0" stroke-width="3"/><path d="M99 47v13m0 5v2" stroke="#bf8a99" stroke-width="3"/></symbol>
-<symbol id="pieces" viewBox="0 0 120 150"><use href="#person" x="0" y="24" width="105" height="120"/><g fill="#e0dce5" stroke="#a7a0b2"><rect x="3" y="5" width="23" height="20" rx="3"/><rect x="49" y="0" width="25" height="21" rx="3"/><rect x="88" y="18" width="25" height="21" rx="3"/></g><path d="M28 15H43M77 15l9 9" stroke="#afa4b8" stroke-width="2" stroke-dasharray="3 4"/></symbol>
-<symbol id="stale" viewBox="0 0 120 150"><use href="#person" x="0" y="26" width="108" height="120"/><path d="M8 13H43M8 9v9m35-9v9M13 19l25 21M38 19L13 40M8 44H43" fill="none" stroke="#aca5b7" stroke-width="2"/><path d="M75 7h36v32H75Z" fill="#e8e2eb" stroke="#b1a7bb"/><path d="M81 16h22m-22 7h14" stroke="#b9afc4" stroke-width="2"/></symbol>
-<symbol id="tools" viewBox="0 0 120 150"><use href="#person" x="2" y="32" width="105" height="112"/><g fill="#e7e2eb" stroke="#aaa3b5"><rect x="4" y="6" width="29" height="26" rx="4"/><rect x="47" y="1" width="29" height="26" rx="4"/><rect x="88" y="16" width="29" height="26" rx="4"/></g><path d="M12 18l4-4m0 0l4 4m33-4h15M98 29h9" stroke="#a59daf" stroke-width="2"/></symbol>
-<symbol id="architecture" viewBox="0 0 110 150"><path d="M54 29v25M22 80h64M22 80v25m64-25v25M54 54L22 80m32-26l32 26" fill="none" stroke="#8da8ac" stroke-width="2"/><rect x="29" y="10" width="50" height="31" rx="5" fill="#c8ddd9" stroke="#92b9b0"/><rect x="2" y="106" width="41" height="28" rx="5" fill="#dce8e6" stroke="#acc7c1"/><rect x="65" y="106" width="41" height="28" rx="5" fill="#dce8e6" stroke="#acc7c1"/><path d="M38 23h31M11 118h23m41 0h23" stroke="#749b91" stroke-width="3"/></symbol>
-<symbol id="source" viewBox="0 0 110 150"><rect x="4" y="11" width="102" height="126" rx="7" fill="#fff" stroke="#adc9c2"/><path d="M18 31h25m-20 0v75m0-52h17m-17 24h17m-17 24h17" stroke="#a5bdb9" stroke-width="2"/><rect x="37" y="43" width="55" height="22" rx="4" fill="#d4eae0"/><path d="M47 54h35m-35 24h39m-39 24h28" stroke="#75a58d" stroke-width="3"/><path d="M89 57l-8-6v12Z" fill="#538c75"/></symbol>
-<symbol id="roles" viewBox="0 0 110 150"><path d="M55 35v29M55 64L22 91m33-27l33 27" fill="none" stroke="#8cb6a9" stroke-width="2"/><g fill="#e1eee8" stroke="#9fc4b6"><circle cx="55" cy="24" r="21"/><circle cx="23" cy="108" r="21"/><circle cx="87" cy="108" r="21"/></g><g font-size="21" font-weight="700" fill="#51836f" text-anchor="middle"><text x="55" y="31">A</text><text x="23" y="115">B</text><text x="87" y="115">C</text></g></symbol>
-<symbol id="lanes" viewBox="0 0 110 150"><g fill="#e0eee7" stroke="#aac9bb"><rect x="4" y="15" width="103" height="34" rx="6"/><rect x="4" y="59" width="103" height="34" rx="6"/><rect x="4" y="103" width="103" height="34" rx="6"/></g><g fill="#61937b"><circle cx="21" cy="32" r="6"/><circle cx="21" cy="76" r="6"/><circle cx="21" cy="120" r="6"/></g><path d="M38 32h52m-52 44h52m-52 44h52" stroke="#94b5a4" stroke-width="3"/></symbol>
-<symbol id="review" viewBox="0 0 110 150"><rect x="10" y="11" width="76" height="116" rx="7" fill="#fff" stroke="#afc9c0"/><path d="M26 33h42m-42 21h42m-42 21h23" stroke="#b1c7be" stroke-width="3"/><circle cx="75" cy="106" r="28" fill="#d5e9de" stroke="#9fc3af"/><path d="M61 106l10 10 20-23" stroke="#5e9378" stroke-width="4" fill="none"/></symbol>
-<symbol id="integration" viewBox="0 0 110 150"><g fill="#dcece3" stroke="#9abfaa"><rect x="4" y="8" width="39" height="27" rx="4"/><rect x="67" y="8" width="39" height="27" rx="4"/><rect x="15" y="89" width="81" height="49" rx="6"/></g><path d="M23 40l30 36m33-36L57 76" stroke="#9bbaab" stroke-width="2"/><path d="M37 111l11 11 25-27" stroke="#5e9378" stroke-width="4" fill="none"/></symbol>
-<symbol id="refresh" viewBox="0 0 110 150"><path d="M23 32a40 40 0 0 1 67 18m-4 56a40 40 0 0 1-67-18" fill="none" stroke="#8fb7a6" stroke-width="3"/><path d="M91 34l2 20-19-6M18 104l-2-20 19 5" fill="#b6d5c3"/><rect x="28" y="54" width="56" height="40" rx="6" fill="#fff" stroke="#a9c8b9"/><path d="M38 67h35m-35 13h24" stroke="#9bbfac" stroke-width="3"/></symbol>
-<symbol id="portable" viewBox="0 0 110 150"><g fill="#fff" stroke="#a8c7b7"><rect x="3" y="10" width="104" height="34" rx="6"/><rect x="3" y="58" width="104" height="34" rx="6"/><rect x="3" y="106" width="104" height="34" rx="6"/></g><g fill="#5d8b74" font-size="12" text-anchor="middle" font-weight="600"><text x="55" y="32">Codex</text><text x="55" y="80">Claude Code</text><text x="55" y="128">WorkBuddy</text></g></symbol>
-</defs>
-<rect width="1600" height="1480" rx="20" fill="#f5f7fc"/>
-<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,Arial,sans-serif">
-<text x="28" y="45" font-size="30" fill="#253653" font-weight="700" >Why Nativue AI</text>
-<text x="28" y="76" font-size="19" fill="#8490a5" >A clearer view of architecture, collaboration and verified delivery.</text>
-<g transform="translate(24 102)" data-card="1">
-<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
-<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >Understand the code before changing it</text>
-<text x="18" y="58" font-size="17" fill="#8992a6" >Trace modules and relationships back to source.</text>
-<g transform="translate(16 78)" data-panel="before">
-<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
-<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
-<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">Before</text>
-<use href="#lost" x="7" y="51" width="111" height="150"/>
-<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="81" font-size="16.5" fill="#7c7d91" >Where do I even start?</text>
-<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="125" font-size="16.5" fill="#7c7d91" >How do the parts connect?</text>
-<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="169" font-size="16.5" fill="#7c7d91" >What else will this break?</text>
-</g>
-<g transform="translate(390 78)" data-panel="after">
-<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
-<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
-<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">With Nativue</text>
-<use href="#architecture" x="257" y="58" width="89" height="128"/>
-<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="68" font-size="17" fill="#687b83" >See module responsibilities</text>
-<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="103" font-size="17" fill="#687b83" >Follow source evidence</text>
-<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="138" font-size="17" fill="#687b83" >Start with your workspace</text>
-<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >From folders to the bigger picture.</text>
-</g>
-</g>
-<g transform="translate(808 102)" data-card="2">
-<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
-<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >Go from the canvas straight to source</text>
-<text x="18" y="58" font-size="17" fill="#8992a6" >Locate the actual file instead of hunting for a highlight.</text>
-<g transform="translate(16 78)" data-panel="before">
-<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
-<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
-<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">Before</text>
-<use href="#papers" x="7" y="51" width="111" height="150"/>
-<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="81" font-size="16.5" fill="#7c7d91" >Which file does this mean?</text>
-<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="125" font-size="16.5" fill="#7c7d91" >Where is the highlight?</text>
-<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="169" font-size="16.5" fill="#7c7d91" >Open every folder again…</text>
-</g>
-<g transform="translate(390 78)" data-panel="after">
-<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
-<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
-<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">With Nativue</text>
-<use href="#source" x="257" y="58" width="89" height="128"/>
-<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="68" font-size="17" fill="#687b83" >Expand the right folders</text>
-<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="103" font-size="17" fill="#687b83" >Scroll straight to the file</text>
-<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="138" font-size="17" fill="#687b83" >Step through related files</text>
-<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >Connect the picture to the code.</text>
-</g>
-</g>
-<g transform="translate(24 428)" data-card="3">
-<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
-<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >A / B / C, with clear next steps</text>
-<text x="18" y="58" font-size="17" fill="#8992a6" >Keep roles, scope and handoffs in shared records.</text>
-<g transform="translate(16 78)" data-panel="before">
-<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
-<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
-<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">Before</text>
-<use href="#relay" x="7" y="51" width="111" height="150"/>
-<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="81" font-size="16.5" fill="#7c7d91" >Paste this into B’s chat…</text>
-<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="125" font-size="16.5" fill="#7c7d91" >Which session is C in?</text>
-<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="169" font-size="16.5" fill="#7c7d91" >Who takes over next?</text>
-</g>
-<g transform="translate(390 78)" data-panel="after">
-<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
-<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
-<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">With Nativue</text>
-<use href="#roles" x="257" y="58" width="89" height="128"/>
-<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="68" font-size="17" fill="#687b83" >A plans and coordinates</text>
-<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="103" font-size="17" fill="#687b83" >B implements and reworks</text>
-<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="138" font-size="17" fill="#687b83" >C verifies independently</text>
-<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >Hand off records, not memories.</text>
-</g>
-</g>
-<g transform="translate(808 428)" data-card="4">
-<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
-<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >Check dependencies before parallel work</text>
-<text x="18" y="58" font-size="17" fill="#8992a6" >Give tasks clear ownership before conflicts grow.</text>
-<g transform="translate(16 78)" data-panel="before">
-<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
-<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
-<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">Before</text>
-<use href="#collision" x="7" y="51" width="111" height="150"/>
-<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="81" font-size="16.5" fill="#7c7d91" >Two agents, the same file</text>
-<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="125" font-size="16.5" fill="#7c7d91" >We never agreed on the API</text>
-<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="169" font-size="16.5" fill="#7c7d91" >Conflicts at merge time</text>
-</g>
-<g transform="translate(390 78)" data-panel="after">
-<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
-<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
-<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">With Nativue</text>
-<use href="#lanes" x="257" y="58" width="89" height="128"/>
-<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="68" font-size="17" fill="#687b83" >Record file ownership</text>
-<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="103" font-size="17" fill="#687b83" >Respect task dependencies</text>
-<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="138" font-size="17" fill="#687b83" >Coordinate overlapping work</text>
-<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >See who owns what, and what can run.</text>
-</g>
-</g>
-<g transform="translate(24 754)" data-card="5">
-<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
-<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >An independent C after self-testing</text>
-<text x="18" y="58" font-size="17" fill="#8992a6" >Record what passed, failed, or still needs testing.</text>
-<g transform="translate(16 78)" data-panel="before">
-<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
-<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
-<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">Before</text>
-<use href="#uncertain" x="7" y="51" width="111" height="150"/>
-<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="81" font-size="16.5" fill="#7c7d91" >The agent says it is fixed</text>
-<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="125" font-size="16.5" fill="#7c7d91" >Did only the build pass?</text>
-<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="169" font-size="16.5" fill="#7c7d91" >Were retries tested?</text>
-</g>
-<g transform="translate(390 78)" data-panel="after">
-<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
-<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
-<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">With Nativue</text>
-<use href="#review" x="257" y="58" width="89" height="128"/>
-<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="68" font-size="17" fill="#687b83" >Review in a separate context</text>
-<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="103" font-size="17" fill="#687b83" >Bind evidence to a commit</text>
-<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="138" font-size="17" fill="#687b83" >Return failures to B</text>
-<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >Built and verified are different facts.</text>
-</g>
-</g>
-<g transform="translate(808 754)" data-card="6">
-<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
-<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >Review the integrated version, too</text>
-<text x="18" y="58" font-size="17" fill="#8992a6" >Verify the combination before the user handtest.</text>
-<g transform="translate(16 78)" data-panel="before">
-<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
-<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
-<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">Before</text>
-<use href="#pieces" x="7" y="51" width="111" height="150"/>
-<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="81" font-size="16.5" fill="#7c7d91" >Every branch says “passed”</text>
-<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="125" font-size="16.5" fill="#7c7d91" >Will they work together?</text>
-<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="169" font-size="16.5" fill="#7c7d91" >Which version passed?</text>
-</g>
-<g transform="translate(390 78)" data-panel="after">
-<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
-<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
-<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">With Nativue</text>
-<use href="#integration" x="257" y="58" width="89" height="128"/>
-<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="68" font-size="17" fill="#687b83" >Integrate accepted packages</text>
-<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="103" font-size="17" fill="#687b83" >C checks the integration</text>
-<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="138" font-size="17" fill="#687b83" >User acceptance stays separate</text>
-<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >Deliver a version you can trace.</text>
-</g>
-</g>
-<g transform="translate(24 1080)" data-card="7">
-<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
-<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >Let the canvas follow code changes</text>
-<text x="18" y="58" font-size="17" fill="#8992a6" >The local service checks changes and shows freshness.</text>
-<g transform="translate(16 78)" data-panel="before">
-<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
-<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
-<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">Before</text>
-<use href="#stale" x="7" y="51" width="111" height="150"/>
-<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="81" font-size="16.5" fill="#7c7d91" >New code, an old diagram</text>
-<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="125" font-size="16.5" fill="#7c7d91" >When was this last updated?</text>
-<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="169" font-size="16.5" fill="#7c7d91" >Local or remote—which is it?</text>
-</g>
-<g transform="translate(390 78)" data-panel="after">
-<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
-<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
-<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">With Nativue</text>
-<use href="#refresh" x="257" y="58" width="89" height="128"/>
-<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="68" font-size="17" fill="#687b83" >Watch source and task changes</text>
-<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="103" font-size="17" fill="#687b83" >Analyze with your settings</text>
-<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="138" font-size="17" fill="#687b83" >Show source, version and time</text>
-<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >Outdated is visible, never disguised.</text>
-</g>
-</g>
-<g transform="translate(808 1080)" data-card="8">
-<rect width="768" height="310" rx="16" fill="#ffffff" stroke="#e1e7f2"/>
-<text x="18" y="32" font-size="24" fill="#283853" font-weight="650" >Your tool, one shared workflow</text>
-<text x="18" y="58" font-size="17" fill="#8992a6" >Open separate chats, or delegate when the host supports it.</text>
-<g transform="translate(16 78)" data-panel="before">
-<rect width="362" height="214" rx="12" fill="#fcf3f4" stroke="#f2dce2"/>
-<rect x="12" y="11" width="66" height="25" rx="6" fill="#fbe0e4"/>
-<text x="45" y="29" font-size="15" fill="#c97583" font-weight="600" text-anchor="middle">Before</text>
-<use href="#tools" x="7" y="51" width="111" height="150"/>
-<rect x="126" y="58" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="81" font-size="16.5" fill="#7c7d91" >New tool, new instructions</text>
-<rect x="126" y="102" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="125" font-size="16.5" fill="#7c7d91" >Too many chats to relay</text>
-<rect x="126" y="146" width="223" height="35" rx="9" fill="#ffffff" stroke="#f0dde3"/>
-<text x="136" y="169" font-size="16.5" fill="#7c7d91" >Role instructions get lost</text>
-</g>
-<g transform="translate(390 78)" data-panel="after">
-<rect width="362" height="214" rx="12" fill="#eff8f3" stroke="#d8ebe1"/>
-<rect x="12" y="11" width="132" height="25" rx="6" fill="#d9efe4"/>
-<text x="78" y="29" font-size="15" fill="#508b70" font-weight="600" text-anchor="middle">With Nativue</text>
-<use href="#portable" x="257" y="58" width="89" height="128"/>
-<rect x="15" y="58" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="68" font-size="17" fill="#687b83" >A portable Skill and handoffs</text>
-<rect x="15" y="93" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="103" font-size="17" fill="#687b83" >Manual A / B / C sessions</text>
-<rect x="15" y="128" width="6" height="6" rx="1" fill="#6d9b86"/>
-<text x="30" y="138" font-size="17" fill="#687b83" >Native agents when available</text>
-<text x="15" y="195" font-size="16.5" fill="#4e8b72" font-weight="600" >Choose the tool. Keep the workflow.</text>
-</g>
-</g>
-<text x="28" y="1437" font-size="16" fill="#8793a5" >Source evidence is not runtime acceptance. Background analysis needs a runner; native agents depend on the host.</text>
-<text x="1572" y="1462" font-size="15" fill="#8793a5" text-anchor="end">SienGe AI Lab · SienGe的AI实验室</text>
-</g></svg>
+  <title id="title">Why Nativue AI</title>
+  <desc id="desc">For non-technical vibe coders managing complex software: architecture for oversight, A/B/C roles and parallel views for delivery.</desc>
+  <defs>
+    <symbol id="person" viewBox="0 0 120 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="54" cy="34" r="22" fill="white" />
+        <path d="M33 30Q28 10 46 10Q66 0 76 24L75 33Q67 24 55 24Q42 30 33 30Z" fill="#25272b" />
+        <path d="M49 11Q42 17 50 23" stroke="white" stroke-width="2.7" />
+        <circle cx="46" cy="35" r="1.6" fill="#25272b" />
+        <circle cx="62" cy="35" r="1.6" fill="#25272b" />
+        <path d="M47 44Q54 50 61 43" />
+        <path d="M47 56L37 60Q24 63 20 78L15 99 39 105M61 56L70 61Q78 66 82 82L91 99 76 105" />
+        <path d="M33 74L32 99M73 75L76 99M34 104L34 119 68 119 70 109" />
+        <path d="M35 120L28 143 17 143M62 120L73 143 86 143" />
+        <path d="M9 117H110M16 117V145M104 117V145" />
+        <path d="M42 81H102L95 111H36Z" fill="white" />
+        <path d="M36 111H99L103 115H32Z" fill="white" />
+        <circle cx="68" cy="96" r="2" />
+        <path d="M25 103l9 1m-8-5l9 2m49 0l-8 2" />
+      </g>
+    </symbol>
+    <symbol id="lost" viewBox="0 0 120 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <use href="#person" x="0" y="17" width="109" height="133" />
+        <path d="M93 11Q92 3 101 3Q112 4 108 13L101 19V24" />
+        <circle cx="101" cy="31" r="1.6" fill="#25272b" />
+        <path d="M5 28l9-3m-7 12h8" />
+      </g>
+    </symbol>
+    <symbol id="papers" viewBox="0 0 120 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <use href="#person" x="0" y="8" width="109" height="133" />
+        <path d="M1 133l22-6 17 9-23 7ZM34 141l23-7 13 8-21 7ZM84 129l21-6 14 8-21 7Z" fill="white" />
+        <path d="M94 8h18v25H94Zm4 8h10m-10 7h7" />
+      </g>
+    </symbol>
+    <symbol id="relay" viewBox="0 0 120 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <use href="#person" x="0" y="25" width="106" height="122" />
+        <path d="M3 3H55V25H25L16 34V25H3Z" fill="white" />
+        <path d="M68 20H117V42H103L95 51V42H68Z" fill="white" />
+        <path d="M13 14h31m32 17h29" />
+      </g>
+    </symbol>
+    <symbol id="collision" viewBox="0 0 120 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <use href="#person" x="0" y="49" width="68" height="96" />
+        <use href="#person" x="53" y="49" width="68" height="96" />
+        <path d="M48 7h29v35H48Zm6 11h17m-17 8h13M40 57l13-13m30 13L71 44M90 6l9 9m0-9l-9 9" />
+      </g>
+    </symbol>
+    <symbol id="uncertain" viewBox="0 0 120 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <use href="#person" x="0" y="19" width="107" height="130" />
+        <path d="M83 8h32v30H98L89 46V38H83Z" fill="white" />
+        <path d="M90 22l6 6 11-13M103 54v10m0 5v1" />
+      </g>
+    </symbol>
+    <symbol id="pieces" viewBox="0 0 120 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <use href="#person" x="0" y="25" width="108" height="124" />
+        <rect x="3" y="3" width="25" height="22" rx="3" fill="white" />
+        <rect x="46" y="0" width="25" height="22" rx="3" fill="white" />
+        <rect x="88" y="15" width="25" height="22" rx="3" fill="white" />
+        <path d="M30 13h11m33 2l10 9" stroke-dasharray="3 4" />
+      </g>
+    </symbol>
+    <symbol id="stale" viewBox="0 0 120 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <use href="#person" x="0" y="25" width="108" height="124" />
+        <path d="M3 5h34M7 6v7l25 22v7M33 6v7L8 35v7M3 43h34M80 5h31v32H80Zm6 8h19m-19 8h12" fill="white" />
+      </g>
+    </symbol>
+    <symbol id="tools" viewBox="0 0 120 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <use href="#person" x="0" y="28" width="108" height="122" />
+        <rect x="2" y="4" width="29" height="23" rx="4" fill="white" />
+        <rect x="46" y="0" width="29" height="23" rx="4" fill="white" />
+        <rect x="87" y="14" width="29" height="23" rx="4" fill="white" />
+        <path d="M9 15h14m30-4h14m28 14h13" />
+      </g>
+    </symbol>
+    <symbol id="architecture" viewBox="0 0 110 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M55 39v20M24 78h62M24 78v22m62-22v22M55 59L24 78m31-19l31 19" />
+        <rect x="29" y="8" width="51" height="32" rx="5" fill="white" />
+        <rect x="3" y="101" width="42" height="29" rx="5" fill="white" />
+        <rect x="65" y="101" width="42" height="29" rx="5" fill="white" />
+        <path d="M40 23h29M13 115h21m42 0h20" />
+      </g>
+    </symbol>
+    <symbol id="source" viewBox="0 0 110 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="8" width="102" height="127" rx="7" fill="white" />
+        <path d="M17 29h26m-20 0v76m0-52h15m-15 25h15m-15 24h15" />
+        <rect x="37" y="42" width="56" height="23" rx="4" fill="white" />
+        <path d="M47 54h33m-33 24h39m-39 24h28M100 55h-9l5-5m-5 5l5 5" />
+      </g>
+    </symbol>
+    <symbol id="roles" viewBox="0 0 110 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M54 40v15M54 55L26 87m28-32l29 32" />
+        <circle cx="54" cy="24" r="17" fill="white" />
+        <circle cx="25" cy="106" r="17" fill="white" />
+        <circle cx="84" cy="106" r="17" fill="white" />
+        <path d="M31 60q5-18 23-18t23 18M5 140q3-17 20-17t20 17m20 0q3-17 19-17t19 17" />
+        <g fill="#25272b" stroke="none" font-size="18" text-anchor="middle" font-weight="650">
+          <text x="54" y="31" fill="#666a73">A</text>
+          <text x="25" y="113" fill="#666a73">B</text>
+          <text x="84" y="113" fill="#666a73">C</text>
+        </g>
+      </g>
+    </symbol>
+    <symbol id="lanes" viewBox="0 0 110 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="13" width="104" height="34" rx="6" fill="white" />
+        <rect x="3" y="58" width="104" height="34" rx="6" fill="white" />
+        <rect x="3" y="103" width="104" height="34" rx="6" fill="white" />
+        <circle cx="21" cy="30" r="6" />
+        <circle cx="21" cy="75" r="6" />
+        <circle cx="21" cy="120" r="6" />
+        <path d="M38 30h49M38 75h49m-49 45h49" />
+      </g>
+    </symbol>
+    <symbol id="review" viewBox="0 0 110 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="75" height="117" rx="7" fill="white" />
+        <path d="M23 30h44M23 51h44M23 72h25" />
+        <circle cx="75" cy="106" r="28" fill="white" />
+        <path d="M61 106l10 10 20-23" stroke-width="3.5" />
+      </g>
+    </symbol>
+    <symbol id="integration" viewBox="0 0 110 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="7" width="39" height="27" rx="4" fill="white" />
+        <rect x="67" y="7" width="39" height="27" rx="4" fill="white" />
+        <rect x="15" y="90" width="81" height="49" rx="6" fill="white" />
+        <path d="M23 40l30 36m33-36L57 76M38 111l10 10 24-26" />
+      </g>
+    </symbol>
+    <symbol id="refresh" viewBox="0 0 110 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M23 32a40 40 0 0 1 67 18m-4 56a40 40 0 0 1-67-18M91 34l2 20-19-6M18 104l-2-20 19 5" />
+        <rect x="28" y="54" width="56" height="40" rx="6" fill="white" />
+        <path d="M38 67h35m-35 13h24" />
+      </g>
+    </symbol>
+    <symbol id="portable" viewBox="0 0 110 150">
+      <g fill="none" stroke="#25272b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="10" width="104" height="34" rx="6" fill="white" />
+        <rect x="3" y="58" width="104" height="34" rx="6" fill="white" />
+        <rect x="3" y="106" width="104" height="34" rx="6" fill="white" />
+        <g fill="#25272b" stroke="none" font-size="12" text-anchor="middle" font-weight="600">
+          <text x="55" y="32" fill="#666a73">Codex</text>
+          <text x="55" y="80" fill="#666a73">Claude Code</text>
+          <text x="55" y="128" fill="#666a73">WorkBuddy</text>
+        </g>
+      </g>
+    </symbol>
+  </defs>
+  <rect width="1600" height="1480" rx="20" fill="white" />
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,Arial,sans-serif">
+    <text x="28" y="45" font-size="30" fill="#25272b" font-weight="700">Build complex software with AI. Stay in control.</text>
+    <text x="28" y="76" font-size="19" fill="#666a73">For non-technical vibe coders: steer with architecture, manage progress with clear roles.</text>
+    <g transform="translate(24 102)" data-card="1">
+      <rect width="768" height="310" rx="16" fill="white" stroke="#e0e1e5" />
+      <text x="18" y="32" font-size="24" fill="#25272b" font-weight="650">Keep the big picture. Keep AI on track.</text>
+      <text x="18" y="58" font-size="17" fill="#666a73">As the project grows, agree on scope through the map.</text>
+      <g transform="translate(16 78)" data-panel="before">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#d68a94" stroke-width="1.6" />
+        <rect x="12" y="11" width="66" height="25" rx="6" fill="white" stroke="#d68a94" stroke-width="1.1" />
+        <text x="45" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">Before</text>
+        <use href="#lost" x="7" y="51" width="111" height="150" />
+        <rect x="126" y="58" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 93l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="81" font-size="16.5" fill="#666a73">I can explain it, not read it</text>
+        <rect x="126" y="102" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 137l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="125" font-size="16.5" fill="#666a73">More features, less control</text>
+        <rect x="126" y="146" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 181l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="169" font-size="16.5" fill="#666a73">Did AI change the plan?</text>
+      </g>
+      <g transform="translate(390 78)" data-panel="after">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#78a98e" stroke-width="1.6" />
+        <rect x="12" y="11" width="132" height="25" rx="6" fill="white" stroke="#78a98e" stroke-width="1.1" />
+        <text x="78" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">With Nativue</text>
+        <use href="#architecture" x="257" y="58" width="89" height="128" />
+        <rect x="15" y="58" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="68" font-size="17" fill="#666a73">See how the parts fit</text>
+        <rect x="15" y="93" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="103" font-size="17" fill="#666a73">Agree on scope and impact</text>
+        <rect x="15" y="128" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="138" font-size="17" fill="#666a73">Keep agents within scope</text>
+        <text x="15" y="195" font-size="16.5" fill="#666a73" font-weight="600">You steer. Your agent checks the code.</text>
+      </g>
+    </g>
+    <g transform="translate(808 102)" data-card="2">
+      <rect width="768" height="310" rx="16" fill="white" stroke="#e0e1e5" />
+      <text x="18" y="32" font-size="24" fill="#25272b" font-weight="650">See what changes, and what it affects</text>
+      <text x="18" y="58" font-size="17" fill="#666a73">Trace a feature to real files when you need the evidence.</text>
+      <g transform="translate(16 78)" data-panel="before">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#d68a94" stroke-width="1.6" />
+        <rect x="12" y="11" width="66" height="25" rx="6" fill="white" stroke="#d68a94" stroke-width="1.1" />
+        <text x="45" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">Before</text>
+        <use href="#papers" x="7" y="51" width="111" height="150" />
+        <rect x="126" y="58" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 93l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="81" font-size="16.5" fill="#666a73">Where did AI change this?</text>
+        <rect x="126" y="102" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 137l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="125" font-size="16.5" fill="#666a73">What else does it affect?</text>
+        <rect x="126" y="146" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 181l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="169" font-size="16.5" fill="#666a73">Which files belong here?</text>
+      </g>
+      <g transform="translate(390 78)" data-panel="after">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#78a98e" stroke-width="1.6" />
+        <rect x="12" y="11" width="132" height="25" rx="6" fill="white" stroke="#78a98e" stroke-width="1.1" />
+        <text x="78" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">With Nativue</text>
+        <use href="#source" x="257" y="58" width="89" height="128" />
+        <rect x="15" y="58" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="68" font-size="17" fill="#666a73">Locate a module’s files</text>
+        <rect x="15" y="93" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="103" font-size="17" fill="#666a73">Ask your agent about impact</text>
+        <rect x="15" y="128" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="138" font-size="17" fill="#666a73">Ground decisions in source</text>
+        <text x="15" y="195" font-size="16.5" fill="#666a73" font-weight="600">Follow the evidence, not every line.</text>
+      </g>
+    </g>
+    <g transform="translate(24 428)" data-card="3">
+      <rect width="768" height="310" rx="16" fill="white" stroke="#e0e1e5" />
+      <text x="18" y="32" font-size="24" fill="#25272b" font-weight="650">A / B / C, with clear handoffs</text>
+      <text x="18" y="58" font-size="17" fill="#666a73">Separate discussion, implementation and review.</text>
+      <g transform="translate(16 78)" data-panel="before">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#d68a94" stroke-width="1.6" />
+        <rect x="12" y="11" width="66" height="25" rx="6" fill="white" stroke="#d68a94" stroke-width="1.1" />
+        <text x="45" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">Before</text>
+        <use href="#relay" x="7" y="51" width="111" height="150" />
+        <rect x="126" y="58" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 93l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="81" font-size="16.5" fill="#666a73">Paste this into B’s chat…</text>
+        <rect x="126" y="102" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 137l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="125" font-size="16.5" fill="#666a73">Which session is C in?</text>
+        <rect x="126" y="146" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 181l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="169" font-size="16.5" fill="#666a73">Who takes over next?</text>
+      </g>
+      <g transform="translate(390 78)" data-panel="after">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#78a98e" stroke-width="1.6" />
+        <rect x="12" y="11" width="132" height="25" rx="6" fill="white" stroke="#78a98e" stroke-width="1.1" />
+        <text x="78" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">With Nativue</text>
+        <use href="#roles" x="257" y="58" width="89" height="128" />
+        <rect x="15" y="58" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="68" font-size="17" fill="#666a73">A discusses and plans</text>
+        <rect x="15" y="93" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="103" font-size="17" fill="#666a73">B builds, tests and reworks</text>
+        <rect x="15" y="128" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="138" font-size="17" fill="#666a73">C reviews independently</text>
+        <text x="15" y="195" font-size="16.5" fill="#666a73" font-weight="600">Less relaying. Clear roles and scope.</text>
+      </g>
+    </g>
+    <g transform="translate(808 428)" data-card="4">
+      <rect width="768" height="310" rx="16" fill="white" stroke="#e0e1e5" />
+      <text x="18" y="32" font-size="24" fill="#25272b" font-weight="650">Split big requests. See parallel progress.</text>
+      <text x="18" y="58" font-size="17" fill="#666a73">Know who is doing what, and what must happen first.</text>
+      <g transform="translate(16 78)" data-panel="before">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#d68a94" stroke-width="1.6" />
+        <rect x="12" y="11" width="66" height="25" rx="6" fill="white" stroke="#d68a94" stroke-width="1.1" />
+        <text x="45" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">Before</text>
+        <use href="#collision" x="7" y="51" width="111" height="150" />
+        <rect x="126" y="58" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 93l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="81" font-size="16.5" fill="#666a73">What should happen first?</text>
+        <rect x="126" y="102" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 137l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="125" font-size="16.5" fill="#666a73">Who owns this task?</text>
+        <rect x="126" y="146" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 181l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="169" font-size="16.5" fill="#666a73">Will parallel changes clash?</text>
+      </g>
+      <g transform="translate(390 78)" data-panel="after">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#78a98e" stroke-width="1.6" />
+        <rect x="12" y="11" width="132" height="25" rx="6" fill="white" stroke="#78a98e" stroke-width="1.1" />
+        <text x="78" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">With Nativue</text>
+        <use href="#lanes" x="257" y="58" width="89" height="128" />
+        <rect x="15" y="58" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="68" font-size="17" fill="#666a73">Create reviewable tasks</text>
+        <rect x="15" y="93" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="103" font-size="17" fill="#666a73">See task owners and order</text>
+        <rect x="15" y="128" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="138" font-size="17" fill="#666a73">Parallelize ready work</text>
+        <text x="15" y="195" font-size="16.5" fill="#666a73" font-weight="600">Manage complexity through the board.</text>
+      </g>
+    </g>
+    <g transform="translate(24 754)" data-card="5">
+      <rect width="768" height="310" rx="16" fill="white" stroke="#e0e1e5" />
+      <text x="18" y="32" font-size="24" fill="#25272b" font-weight="650">“Fixed” needs an independent check</text>
+      <text x="18" y="58" font-size="17" fill="#666a73">Check behavior, failures and recovery—not just a reply.</text>
+      <g transform="translate(16 78)" data-panel="before">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#d68a94" stroke-width="1.6" />
+        <rect x="12" y="11" width="66" height="25" rx="6" fill="white" stroke="#d68a94" stroke-width="1.1" />
+        <text x="45" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">Before</text>
+        <use href="#uncertain" x="7" y="51" width="111" height="150" />
+        <rect x="126" y="58" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 93l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="81" font-size="16.5" fill="#666a73">It says fixed. It still breaks.</text>
+        <rect x="126" y="102" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 137l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="125" font-size="16.5" fill="#666a73">Did only the build pass?</text>
+        <rect x="126" y="146" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 181l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="169" font-size="16.5" fill="#666a73">Were retries tested?</text>
+      </g>
+      <g transform="translate(390 78)" data-panel="after">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#78a98e" stroke-width="1.6" />
+        <rect x="12" y="11" width="132" height="25" rx="6" fill="white" stroke="#78a98e" stroke-width="1.1" />
+        <text x="78" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">With Nativue</text>
+        <use href="#review" x="257" y="58" width="89" height="128" />
+        <rect x="15" y="58" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="68" font-size="17" fill="#666a73">C reviews in its own context</text>
+        <rect x="15" y="93" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="103" font-size="17" fill="#666a73">Bind evidence to a version</text>
+        <rect x="15" y="128" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="138" font-size="17" fill="#666a73">Return failed work to B</text>
+        <text x="15" y="195" font-size="16.5" fill="#666a73" font-weight="600">Built and verified are different facts.</text>
+      </g>
+    </g>
+    <g transform="translate(808 754)" data-card="6">
+      <rect width="768" height="310" rx="16" fill="white" stroke="#e0e1e5" />
+      <text x="18" y="32" font-size="24" fill="#25272b" font-weight="650">Working parts need a working whole</text>
+      <text x="18" y="58" font-size="17" fill="#666a73">Test the combination before the user handtest.</text>
+      <g transform="translate(16 78)" data-panel="before">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#d68a94" stroke-width="1.6" />
+        <rect x="12" y="11" width="66" height="25" rx="6" fill="white" stroke="#d68a94" stroke-width="1.1" />
+        <text x="45" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">Before</text>
+        <use href="#pieces" x="7" y="51" width="111" height="150" />
+        <rect x="126" y="58" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 93l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="81" font-size="16.5" fill="#666a73">Works alone. Fails merged.</text>
+        <rect x="126" y="102" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 137l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="125" font-size="16.5" fill="#666a73">One fix breaks another part</text>
+        <rect x="126" y="146" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 181l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="169" font-size="16.5" fill="#666a73">Which version passed?</text>
+      </g>
+      <g transform="translate(390 78)" data-panel="after">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#78a98e" stroke-width="1.6" />
+        <rect x="12" y="11" width="132" height="25" rx="6" fill="white" stroke="#78a98e" stroke-width="1.1" />
+        <text x="78" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">With Nativue</text>
+        <use href="#integration" x="257" y="58" width="89" height="128" />
+        <rect x="15" y="58" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="68" font-size="17" fill="#666a73">Review each repair first</text>
+        <rect x="15" y="93" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="103" font-size="17" fill="#666a73">Verify the combined version</text>
+        <rect x="15" y="128" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="138" font-size="17" fill="#666a73">Give the user a handtest</text>
+        <text x="15" y="195" font-size="16.5" fill="#666a73" font-weight="600">Deliver a version you can trace.</text>
+      </g>
+    </g>
+    <g transform="translate(24 1080)" data-card="7">
+      <rect width="768" height="310" rx="16" fill="white" stroke="#e0e1e5" />
+      <text x="18" y="32" font-size="24" fill="#25272b" font-weight="650">New code should not mean an old map</text>
+      <text x="18" y="58" font-size="17" fill="#666a73">The local service shows changes, freshness and versions.</text>
+      <g transform="translate(16 78)" data-panel="before">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#d68a94" stroke-width="1.6" />
+        <rect x="12" y="11" width="66" height="25" rx="6" fill="white" stroke="#d68a94" stroke-width="1.1" />
+        <text x="45" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">Before</text>
+        <use href="#stale" x="7" y="51" width="111" height="150" />
+        <rect x="126" y="58" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 93l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="81" font-size="16.5" fill="#666a73">New code, an old diagram</text>
+        <rect x="126" y="102" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 137l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="125" font-size="16.5" fill="#666a73">When was this last updated?</text>
+        <rect x="126" y="146" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 181l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="169" font-size="16.5" fill="#666a73">Local or remote—which is it?</text>
+      </g>
+      <g transform="translate(390 78)" data-panel="after">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#78a98e" stroke-width="1.6" />
+        <rect x="12" y="11" width="132" height="25" rx="6" fill="white" stroke="#78a98e" stroke-width="1.1" />
+        <text x="78" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">With Nativue</text>
+        <use href="#refresh" x="257" y="58" width="89" height="128" />
+        <rect x="15" y="58" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="68" font-size="17" fill="#666a73">Track code and tasks</text>
+        <rect x="15" y="93" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="103" font-size="17" fill="#666a73">Analyze with your settings</text>
+        <rect x="15" y="128" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="138" font-size="17" fill="#666a73">Mark stale or untested work</text>
+        <text x="15" y="195" font-size="16.5" fill="#666a73" font-weight="600">Discuss the same version of reality.</text>
+      </g>
+    </g>
+    <g transform="translate(808 1080)" data-card="8">
+      <rect width="768" height="310" rx="16" fill="white" stroke="#e0e1e5" />
+      <text x="18" y="32" font-size="24" fill="#25272b" font-weight="650">From one person to a team of agents</text>
+      <text x="18" y="58" font-size="17" fill="#666a73">Use separate chats or native delegation when supported.</text>
+      <g transform="translate(16 78)" data-panel="before">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#d68a94" stroke-width="1.6" />
+        <rect x="12" y="11" width="66" height="25" rx="6" fill="white" stroke="#d68a94" stroke-width="1.1" />
+        <text x="45" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">Before</text>
+        <use href="#tools" x="7" y="51" width="111" height="150" />
+        <rect x="126" y="58" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 93l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="81" font-size="16.5" fill="#666a73">Too many chats to relay</text>
+        <rect x="126" y="102" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 137l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="125" font-size="16.5" fill="#666a73">New tool, new instructions</text>
+        <rect x="126" y="146" width="223" height="35" rx="9" fill="white" stroke="#a7aab2" />
+        <path d="M137 181l-11 7 3-7" fill="white" stroke="#a7aab2" stroke-width="1.1" />
+        <text x="136" y="169" font-size="16.5" fill="#666a73">Role instructions get lost</text>
+      </g>
+      <g transform="translate(390 78)" data-panel="after">
+        <rect width="362" height="214" rx="12" fill="white" stroke="#78a98e" stroke-width="1.6" />
+        <rect x="12" y="11" width="132" height="25" rx="6" fill="white" stroke="#78a98e" stroke-width="1.1" />
+        <text x="78" y="29" font-size="15" fill="#666a73" font-weight="600" text-anchor="middle">With Nativue</text>
+        <use href="#portable" x="257" y="58" width="89" height="128" />
+        <rect x="15" y="58" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="68" font-size="17" fill="#666a73">A portable Skill and handoffs</text>
+        <rect x="15" y="93" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="103" font-size="17" fill="#666a73">Manual A / B / C sessions</text>
+        <rect x="15" y="128" width="6" height="6" rx="1" fill="#555a62" />
+        <text x="30" y="138" font-size="17" fill="#666a73">Native agents when available</text>
+        <text x="15" y="195" font-size="16.5" fill="#666a73" font-weight="600">Choose the tool. Keep the workflow.</text>
+      </g>
+    </g>
+    <text x="28" y="1437" font-size="16" fill="#666a73">Source evidence is not runtime acceptance. Background analysis needs a runner; native agents depend on the host.</text>
+    <text x="1572" y="1462" font-size="15" fill="#666a73" text-anchor="end">SienGe AI Lab · SienGe的AI实验室</text>
+  </g>
+</svg>

@@ -4,11 +4,29 @@
 
 English · [简体中文](README.zh-CN.md)
 
-Understand a codebase, coordinate A/B/C agents, and see exactly which version has passed review. Nativue combines a reusable Skill with a local CLI and a browser canvas. It works with an existing repository; it does not prescribe your framework or model.
+**A development canvas for non-technical vibe coders managing complex software projects.**
+
+When an AI-built project grows toward production, features multiply, modules depend on one another, and several agents may work at once. The challenge grows from getting code written to **keeping the whole project in view, keeping AI on track, and moving work forward.**
+
+Nativue brings architecture, user flows and parallel development progress into one canvas. Keep making product decisions in natural language: use the map to discuss relationships and scope, then manage delivery through A/B/C roles and independent review. You can oversee the project without first reading every line of its implementation.
 
 By **SienGe AI Lab** · Xiaohongshu / 小红书: **SienGe的AI实验室**
 
-![Eight before-and-after scenes for architecture and A/B/C collaboration](assets/pain-points.en.svg)
+## The starting point: a growing project, a shrinking sense of control
+
+Nativue grew out of the creator’s AI development experience, shared on Xiaohongshu. This account is adapted from that story:
+
+> I have no coding background, but I was using AI to build a complex project with production-grade software as the goal. As development progressed, agents misunderstood requirements, changes needed repeated rework, and it became harder to tell where the project stood.
+>
+> As a frequent Figma flowchart user, I asked AI to build an architecture canvas. I could see what each module did, how the parts communicated, and which modules a user journey passed through. I finally had a shared map to discuss with the agent.
+>
+> Then I separated the agents into A, B and C. A discussed interactions with me and split the work. B implemented, with independent tasks running in parallel where possible. C reviewed independently and returned failed work to B. The integrated version went through another review before my own handtest.
+
+That is the workflow Nativue supports: **use architecture to keep the big picture and agree on scope; use clear roles and a parallel view to manage development progress.** The map helps you ask specific questions and check whether changes match your intent. Independent verification and your final judgment remain part of the process.
+
+It is particularly useful when a project grows beyond a small prototype into multiple modules, repeated iterations and changes that must work together.
+
+![Eight scenarios for non-technical vibe coders: project oversight, parallel progress and independent review](assets/pain-points.en.svg)
 
 ## Start locally
 
@@ -31,9 +49,9 @@ Install the included Skill with `install-skill` after checking `node bin/nativue
 
 ## What you see
 
-- **Architecture:** modules, dependencies, source evidence, and confidence labels. Drag, zoom, collapse, and inspect connections.
+- **Architecture:** see what each module owns, how the parts relate, and where a change belongs. Ask your agent to explain the source evidence. Drag, zoom, collapse, and inspect connections.
 - **Journeys:** trace a user flow through relevant modules, with unknown steps identified explicitly.
-- **Parallel tasks:** priorities, dependencies, ownership, rework, independent review, integration, and user acceptance.
+- **Parallel tasks:** see who is doing what, what can run in parallel, and what is blocked. Keep development, self-tests, independent review, integration and user acceptance distinct.
 - **File location:** selecting a source reference reveals and scrolls the right-hand file tree to that file, with navigation between multiple matches.
 - **Versions:** local working state and an optional remote branch have separate provenance. A newer remote graph never implies that local code was updated.
 
