@@ -196,7 +196,7 @@ function render() {
   if (!data) return;
   const savedScroll = document.querySelector(".sidebar-scroll")?.scrollTop, inspectorScroll = document.querySelector(".parallel-inspector")?.scrollTop;
   const active = document.activeElement;
-  const focusSearch = active?.id === "file-search", caret = focusSearch ? active.selectionStart : null;
+  const focusSearch = active?.id === "file-search", caret = focusSearch ? active.selectionStart : null, focusedTreeFile = active?.dataset.treeFile || "";
   const s = snapshot(), r = data.runtime;
   document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
   document.title = `Nativue AI \xB7 ${workspaceTitle()}`;
@@ -217,6 +217,15 @@ function render() {
     el?.focus();
     if (caret !== null && caret !== void 0)
       el?.setSelectionRange(caret, caret);
+  }
+  if (focusedTreeFile) {
+    requestAnimationFrame(() => {
+      const leaf = [
+        ...document.querySelectorAll("[data-tree-file]")
+      ].find((el) => el.dataset.treeFile === focusedTreeFile);
+      if (leaf && selectedFile === focusedTreeFile)
+        leaf.focus({ preventScroll: true });
+    });
   }
   if (viewMode === "map" && !initialFit && s?.modules.length) {
     initialFit = true;

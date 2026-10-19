@@ -120,8 +120,10 @@ try {
   await page.locator('#prev-file').click();
   const chosen=page.locator('[data-tree-file="client/components/item-084.ts"]');
   await chosen.waitFor();
-  await page.waitForTimeout(500);
+  await page.waitForFunction(path=>(document.activeElement as HTMLElement | null)?.dataset.treeFile===path,'client/components/item-084.ts');
   assert.equal(await chosen.evaluate(el=>{const r=el.getBoundingClientRect();const parent=el.closest('.sidebar-scroll')!.getBoundingClientRect();return r.top>=parent.top&&r.bottom<=parent.bottom;}),true);
+  await instance.runtime.scan(true);
+  await page.waitForTimeout(300);
   assert.equal(await chosen.evaluate(el=>document.activeElement===el),true);
   await page.locator('#language-button').click();
   await page.getByRole('heading',{name:'代码与运行地图',exact:true}).waitFor();

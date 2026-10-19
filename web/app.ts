@@ -248,9 +248,12 @@ function render() {
   if (!data) return;
   const savedScroll = document.querySelector(".sidebar-scroll")?.scrollTop,
     inspectorScroll = document.querySelector(".parallel-inspector")?.scrollTop;
-  const active = document.activeElement as HTMLInputElement | null;
+  const active = document.activeElement as HTMLElement | null;
   const focusSearch = active?.id === "file-search",
-    caret = focusSearch ? active.selectionStart : null;
+    caret = focusSearch
+      ? (active as HTMLInputElement).selectionStart
+      : null,
+    focusedTreeFile = active?.dataset.treeFile || "";
   const s = snapshot(),
     r = data.runtime;
   document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
@@ -272,6 +275,15 @@ function render() {
     el?.focus();
     if (caret !== null && caret !== undefined)
       el?.setSelectionRange(caret, caret);
+  }
+  if (focusedTreeFile) {
+    requestAnimationFrame(() => {
+      const leaf = [
+        ...document.querySelectorAll<HTMLButtonElement>("[data-tree-file]"),
+      ].find((el) => el.dataset.treeFile === focusedTreeFile);
+      if (leaf && selectedFile === focusedTreeFile)
+        leaf.focus({ preventScroll: true });
+    });
   }
   if (viewMode === "map" && !initialFit && s?.modules.length) {
     initialFit = true;
