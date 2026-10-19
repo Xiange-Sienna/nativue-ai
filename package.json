@@ -16,6 +16,7 @@
     "src",
     "web",
     "skills",
+    "scripts",
     "assets",
     "docs",
     "README.md",
@@ -27,6 +28,7 @@
     "build": "tsc --noEmit && esbuild web/app.ts --bundle --format=esm --outfile=web/app.js",
     "test": "node --test test/*.test.ts",
     "check": "npm run build && npm test",
+    "docs:screenshots": "npm run build && node scripts/generate-readme-screenshots.ts",
     "pack:check": "npm pack --dry-run",
     "test:browser": "node test/browser.smoke.ts"
   },

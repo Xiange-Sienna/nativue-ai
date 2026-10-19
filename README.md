@@ -49,15 +49,39 @@ Install the included Skill with `install-skill` after checking `node bin/nativue
 
 ## What you see
 
-- **Architecture:** see what each module owns, how the parts relate, and where a change belongs. Ask your agent to explain the source evidence. Drag, zoom, collapse, and inspect connections.
-- **Journeys:** trace a user flow through relevant modules, with unknown steps identified explicitly.
-- **Parallel tasks:** see who is doing what, what can run in parallel, and what is blocked. Keep development, self-tests, independent review, integration and user acceptance distinct.
-- **File location:** selecting a source reference reveals and scrolls the right-hand file tree to that file, with navigation between multiple matches.
-- **Versions:** local working state and an optional remote branch have separate provenance. A newer remote graph never implies that local code was updated.
+The five screenshots below come from the same Nativue interface and use a fictional team knowledge product called **Orbit Desk**. The example contains 15 modules, 18 module relationships, three user journeys and nine parallel tasks. Its paths, tasks and commit versions are demonstration data and do not represent a real repository.
 
-![English architecture canvas for the fictional Atlas Notes project](assets/canvas-preview.en.png)
+### 1. Architecture: see the system and the change boundary
 
-The preview uses a fictional project. [中文界面预览](assets/canvas-preview.zh.png).
+Modules are grouped into frontend, backend, application services and infrastructure. Connections show how the parts relate. The sidebar leads from current work to module responsibilities and source evidence. The canvas supports dragging, zooming and collapsing.
+
+![English architecture map for the fictional Orbit Desk example, with 15 related modules](assets/demo-architecture.en.png)
+
+### 2. Journeys: trace one real action through the system
+
+Choose a journey such as “Create and publish a document” to highlight its modules and read every step in order. Inferred paths remain visibly labeled and never substitute for independent runtime acceptance.
+
+![English user journey for the fictional Orbit Desk example, showing nine document publishing steps](assets/demo-journey.en.png)
+
+### 3. Parallel tasks: coordinate A, B and C around dependencies
+
+Tasks are grouped by dependency depth. Each card exposes priority, developer, reviewer, prerequisites and current stage. Development, self-testing, independent C review, integration review and the user's handtest stay distinct.
+
+![English parallel task canvas for the fictional Orbit Desk example, with nine tasks across four dependency groups](assets/demo-parallel.en.png)
+
+### 4. File location: move from a module to the exact source file
+
+Selecting a source reference expands its parent directories, scrolls the right-hand tree to the file and focuses the exact leaf. When a module owns several files, the controls step through each match.
+
+![English file location view for the fictional Orbit Desk example, focused on three Document service files](assets/demo-file-location.en.png)
+
+### 5. Source versions: know which code the canvas explains
+
+The local workspace and optional remote branch retain separate source, branch, commit, snapshot and update details. A newer remote map only means the remote snapshot changed; it never implies that local code was updated.
+
+![English source version view for the fictional Orbit Desk example, showing the remote preview branch commit and snapshot](assets/demo-version.en.png)
+
+[查看同一示例的中文截图](README.zh-CN.md#画布里有什么).
 
 ## Two ways to work
 

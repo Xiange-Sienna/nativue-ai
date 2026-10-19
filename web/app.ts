@@ -189,6 +189,7 @@ function groupTitle(kind: string) {
     config: ["Configuration", "配置"],
     package: ["Packages", "软件包"],
     application: ["Applications", "应用"],
+    infrastructure: ["Infrastructure", "基础设施"],
   };
   return titles[kind] ? text(...titles[kind]) : kind || text("Modules", "模块");
 }

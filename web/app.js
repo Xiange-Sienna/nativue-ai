@@ -144,7 +144,8 @@ function groupTitle(kind) {
     test: ["Tests", "\u6D4B\u8BD5"],
     config: ["Configuration", "\u914D\u7F6E"],
     package: ["Packages", "\u8F6F\u4EF6\u5305"],
-    application: ["Applications", "\u5E94\u7528"]
+    application: ["Applications", "\u5E94\u7528"],
+    infrastructure: ["Infrastructure", "\u57FA\u7840\u8BBE\u65BD"]
   };
   return titles[kind] ? text(...titles[kind]) : kind || text("Modules", "\u6A21\u5757");
 }
