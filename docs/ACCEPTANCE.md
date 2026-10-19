@@ -13,6 +13,16 @@ This report records tests of the product commit above. Adding or committing this
 
 本报告对应上方产品提交。添加或提交本证据文件不改变已测试的产品版本。验收者仅编写本报告，测试输出及虚构运行样例单独生成。
 
+## README walkthrough follow-up / README 演示补充
+
+On 2026-10-19, commit `a998d2f6781ecc7754bc1ee113e5a61b36f72c2a` added a reproducible bilingual README walkthrough built from the existing interface. Its fictional Orbit Desk fixture contains 15 modules, 18 relationships, three journeys and nine dependency-grouped tasks. Ten screenshots separately demonstrate architecture, journeys, parallel tasks, exact file location and source versions in English and Simplified Chinese. The only product-label change adds the existing architecture kind `infrastructure` to the bilingual group-title map; it does not alter the canvas layout or workflow.
+
+2026-10-19 的提交 `a998d2f6781ecc7754bc1ee113e5a61b36f72c2a` 使用现有界面增加了可重复生成的中英文 README 演示。虚构 Orbit Desk 样例包含 15 个模块、18 条关系、3 条旅程和 9 个按依赖分组的任务；10 张截图分别展示中英文架构图、用户旅程、并行任务、精确文件定位和来源版本。唯一的产品文案改动是在既有架构类型标题映射中补充 `infrastructure` 的中英文名称，未改变画布布局或工作流。
+
+Maintenance verification passed `npm run docs:screenshots`, all 19 automated tests, `npm run test:browser`, link/file checks and `npm run pack:check`. The current package contains 46 files. This follow-up is maintainer verification, not a replacement for the independent C result above, and user acceptance remains pending.
+
+维护验证已通过 `npm run docs:screenshots`、全部 19 项自动测试、`npm run test:browser`、链接与文件检查及 `npm run pack:check`；当前发行包包含 46 个文件。本补充属于维护者验证，不替代上方独立 C 结论，用户手测仍待确认。
+
 ## Executed checks / 已执行检查
 
 | Check / 检查 | Observed result / 实际结果 |
